@@ -27,14 +27,14 @@ def main(mytimer: func.TimerRequest) -> None:
 
     for name in az_function_names:
         query = os.environ['query'] + f' and name == "{name}"'
-        queryDict = json.dumps({'query': query})
+        query_dict = json.dumps({'query': query})
 
         headers = {
         'X-Api-Key': api_key,
         'Content-Type': 'application/json'
         }
 
-        data = get_data(headers, queryDict)
+        data = get_data(headers, query_dict)
         if (len(data['tables'][0]['rows']) == 0):
             empty_logs.append(name)
     
