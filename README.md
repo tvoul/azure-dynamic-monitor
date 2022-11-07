@@ -16,14 +16,14 @@ For every function app, make new API calls to retrieve the names of functions. \
 For every function name, query application insights. If the results are empty, trigger the Logic App to send an email.
 
 ## Prerequisites
-### 1. All functions are created within the same resource group.
+#### 1. All functions are created within the same resource group.
 In it's current state this script set works on a resource group scope. This could be further abstracted to a subscription level, but you would need to adjust the code yourself.
 
 https://learn.microsoft.com/en-us/rest/api/resources/resource-groups/list \
 https://learn.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-group
 
-### 2. Functions we wish to monitor have a tag which we will filter the resources by
-### 3. The functions we wish to monitor are logged in the same instance of Application Insights
+#### 2. Functions we wish to monitor have a tag which we will filter the resources by
+#### 3. The functions we wish to monitor are logged in the same instance of Application Insights
 
 ## Delimitations
 It has only been tested for Function Apps containing one function.
