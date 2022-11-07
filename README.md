@@ -1,3 +1,4 @@
+## Intro
 List a group of Azure resources to retrieve the names of functions and then query application insights.
 This script-set is meant to be deployed as an Azure Function timer trigger.
 
