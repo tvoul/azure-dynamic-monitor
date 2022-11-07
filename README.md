@@ -52,6 +52,9 @@ In the Configuration of the Function App in Azure portal, add the following key-
 *resulting query in code: requests| where timestamp > ago(24h) and name == 'app-name'*
 ### 9. email_trigger - url to the http triggered Logic App (or similar solution)
 
+![Screenshot](https://user-images.githubusercontent.com/90894009/200328126-c7e4516d-26f6-4216-a360-c4c8900404bf.png)
+
+
 ## Logic App
 Setup an http triggered Logic App set the method to post.
 Add a second step to send an email, you can use the information received to compose the email.
