@@ -17,6 +17,9 @@ https://learn.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-
 ### 2. Functions we wish to monitor have a tag which we will filter the resources by
 ### 3. The functions we wish to monitor are logged in the same instance of Application Insights
 
+## Delimitations
+It has only been tested for Function Apps containing one function.
+
 # Setup
 
 ## RBAC
@@ -47,7 +50,8 @@ In the Configuration of the Function App in Azure portal, add the following key-
 ### 6. rbac_tenant - tenant from RBAC created
 ### 7. filter_by - what you wish to filter the resource api call by
 *example: tagname eq 'find-me'*
-### 8. query - the query you wish to run in application insights. " and name == 'app-name'" will be concatenated at the end of your query. \
+### 8. query - the query you wish to run in application insights. " 
+note: " and name == 'app-name'" will be concatenated at the end of your query. \
 *example query: requests| where timestamp > ago(24h)* \
 *resulting query in code: requests| where timestamp > ago(24h) and name == 'app-name'*
 ### 9. email_trigger - url to the http triggered Logic App (or similar solution)
