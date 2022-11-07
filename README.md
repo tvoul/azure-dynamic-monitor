@@ -89,3 +89,6 @@ This is meant to be generic, so it could be used by multiple instances of the mo
     "type": "object"
 }
 ```
+
+![Screenshot2](https://user-images.githubusercontent.com/90894009/200333773-642ef27a-d847-47a7-8b4f-e3ffc3339e4d.png)
+
