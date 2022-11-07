@@ -49,19 +49,19 @@ https://learn.microsoft.com/en-us/azure/bot-service/bot-service-resources-app-in
 In the Configuration of the Function App in Azure portal, add the following key-pair values as application settings. They will be read as environment variables.
 
 ### keys - values
-### 1. subscriptionId - your subscriptions id
-### 2. application_insights_api_key - API key
-### 3. application_insights_app_id - Application ID, can be found under API access
-### 4. rbac_appId - appId from RBAC created
-### 5. rbac_password - password from RBAC created
-### 6. rbac_tenant - tenant from RBAC created
-### 7. filter_by - what you wish to filter the resource api call by
+#### 1. subscriptionId - your subscriptions id
+#### 2. application_insights_api_key - API key
+#### 3. application_insights_app_id - Application ID, can be found under API access
+#### 4. rbac_appId - appId from RBAC created
+#### 5. rbac_password - password from RBAC created
+#### 6. rbac_tenant - tenant from RBAC created
+#### 7. filter_by - what you wish to filter the resource api call by
 *example: tagname eq 'find-me'*
-### 8. query - the query you wish to run in application insights. " 
+#### 8. query - the query you wish to run in application insights. " 
 note: " and name == 'app-name'" will be concatenated at the end of your query. \
 *example query: requests| where timestamp > ago(24h)* \
 *resulting query in code: requests| where timestamp > ago(24h) and name == 'app-name'*
-### 9. email_trigger - url to the http triggered Logic App (or similar solution)
+#### 9. email_trigger - url to the http triggered Logic App (or similar solution)
 
 ![Screenshot](https://user-images.githubusercontent.com/90894009/200328126-c7e4516d-26f6-4216-a360-c4c8900404bf.png)
 
