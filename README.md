@@ -1,7 +1,14 @@
 List a group of Azure resources to retrieve the names of functions and then query application insights.
 This script-set is meant to be deployed as an Azure Function timer trigger.
 
+The idea was to make the code as flexible as possible. The Function App monitors an undefined number of functions, it starts by listing all the resources and filters them out by a specified tag name. It then has a loop that send’s a query for every function name retrieved based on the filter applied.
+
+That way, if we wish to add a new function to monitor, we only have to tag it appropriately in Azure.
+And correspondingly if a resource is removed (or even it’s tag), it will by extent also stop being monitored.
+
+The same function we wish to monitor could have multiple tags and therefore have different queries run at different intervals.
 ## How it works
+Generate a token to get access. \
 Using Azure Resource Manager and Azure REST-API, list the resources inside a resource group. \
 Filter the resources by a specified tag name. \
 For every function app, make new API calls to retrieve the names of functions. \
@@ -60,10 +67,10 @@ note: " and name == 'app-name'" will be concatenated at the end of your query. \
 
 
 ## Logic App
-Setup an http triggered Logic App set the method to post.
+Setup an http triggered Logic App, set the method to post.
 Add a second step to send an email, you can use the information received to compose the email.
 
-This is meant to be generic, so it could be used by multiple instances of the same monitor function.
+This is meant to be generic, so it could be used by multiple instances of the monitoring function.
 
 #### JSON Schema
 ```
