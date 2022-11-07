@@ -1,5 +1,5 @@
 List a group of Azure resources to retrieve the names of functions and then query application insights.
-This script-set is meant to be deployed as an Azure Function.
+This script-set is meant to be deployed as an Azure Function timer trigger.
 
 ## How it works
 Using Azure Resource Manager and Azure REST-API, list the resources inside a resource group. \
