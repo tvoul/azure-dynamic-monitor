@@ -31,7 +31,7 @@ It has only been tested for Function Apps containing one function.
 # Setup
 ## Requests
 Add requests to requirements.txt if deployed as an Azure function. \
-_or install module requests to run/test locally_
+_Install module requests to run/test locally._
 ```
     pip install requests
 ```
