@@ -24,6 +24,11 @@ https://learn.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-
 
 #### 2. Functions we wish to monitor have a tag which we will filter the resources by.
 #### 3. The functions we wish to monitor are logged in the same instance of Application Insights.
+#### 4. Add requests to requirements.txt if deployed as an Azure function \
+_or install module requests to run/test locally_
+```
+    pip install requests
+```
 
 ## Delimitations
 It has only been tested for Function Apps containing one function.
