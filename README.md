@@ -2,7 +2,7 @@
 List a group of Azure resources to retrieve the names of functions and then query application insights.
 This script set is meant to be deployed as an Azure Function timer trigger.
 
-The idea was to make the code as flexible as possible. The Function App monitors an undefined number of functions, it starts by listing all the resources and filters them out by a specified tag name. It then has a loop that send’s a query for every function name retrieved based on the filter applied.
+The idea was to make the code as flexible as possible. This monitors an undefined number of functions, it starts by listing all the resources and filters them out by a specified tag name. It then has a loop that send’s a query for every function name retrieved based on the filter applied.
 
 That way, if we wish to add a new function to monitor, we only have to tag it appropriately in Azure.
 And correspondingly if a resource is removed (or even it’s tag), it will by extent also stop being monitored.
