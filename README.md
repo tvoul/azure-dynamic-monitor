@@ -1,6 +1,6 @@
 ## Intro
 List a group of Azure resources to retrieve the names of functions and then query application insights.
-This script-set is meant to be deployed as an Azure Function timer trigger.
+This script set is meant to be deployed as an Azure Function timer trigger.
 
 The idea was to make the code as flexible as possible. The Function App monitors an undefined number of functions, it starts by listing all the resources and filters them out by a specified tag name. It then has a loop that send’s a query for every function name retrieved based on the filter applied.
 
@@ -22,8 +22,8 @@ In it's current state this script set works on a resource group scope. This coul
 https://learn.microsoft.com/en-us/rest/api/resources/resource-groups/list \
 https://learn.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-group
 
-#### 2. Functions we wish to monitor have a tag which we will filter the resources by
-#### 3. The functions we wish to monitor are logged in the same instance of Application Insights
+#### 2. Functions we wish to monitor have a tag which we will filter the resources by.
+#### 3. The functions we wish to monitor are logged in the same instance of Application Insights.
 
 ## Delimitations
 It has only been tested for Function Apps containing one function.
@@ -59,9 +59,9 @@ In the Configuration of the Function App in Azure portal, add the following key-
 #### 7. filter_by - what you wish to filter the resource api call by
 *example: tagname eq 'find-me'*
 #### 8. query - the query you wish to run in application insights. " 
-note: " and name == 'app-name'" will be concatenated at the end of your query. \
+note: " and name == 'function-name'" will be concatenated at the end of your query. \
 *example query: requests| where timestamp > ago(24h)* \
-*resulting query in code: requests| where timestamp > ago(24h) and name == 'app-name'*
+*resulting query in code: requests| where timestamp > ago(24h) and name == 'function-name'*
 #### 9. email_trigger - url to the http triggered Logic App (or similar solution)
 
 ![Screenshot](https://user-images.githubusercontent.com/90894009/200328126-c7e4516d-26f6-4216-a360-c4c8900404bf.png)
