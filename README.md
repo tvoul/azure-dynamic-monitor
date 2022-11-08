@@ -29,8 +29,8 @@ https://learn.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-
 It has only been tested for Function Apps containing one function.
 
 # Setup
-
-#### Add requests to requirements.txt if deployed as an Azure function.
+## Requests
+Add requests to requirements.txt if deployed as an Azure function. \
 _or install module requests to run/test locally_
 ```
     pip install requests
